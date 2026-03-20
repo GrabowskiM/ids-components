@@ -7,7 +7,7 @@
     "license": "MIT",
     "dependencies": {
         "@floating-ui/react": "^0.27.19",
-        "@ibexa/ids-core": "*",
+        "@ibexa/ids-core": "git@github.com:GrabowskiM/ids-core.git#main",
         "cross-env": "^10.1.0"
     },
     "scripts": {
