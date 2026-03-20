@@ -1,0 +1,27 @@
+{
+    "name": "@ibexa/ids-components",
+    "version": "1.0.2",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "dependencies": {
+        "@floating-ui/react": "^0.27.19",
+        "@ibexa/ids-core": "*",
+        "cross-env": "^10.1.0"
+    },
+    "scripts": {
+        "prettier:test": "yarn prettier \"./scripts/*.js\" \"./src/**/*.{js,ts,jsx,tsx}\" --check",
+        "prettier:fix": "yarn prettier:test --write",
+        "eslint:test": "yarn eslint \"./scripts/*.js\" \"./src/**/*.{js,ts,jsx,tsx}\"",
+        "eslint:fix": "yarn eslint:test --fix",
+        "ts:test": "yarn tsc --noEmit",
+        "test": "yarn prettier:test && yarn eslint:test && yarn ts:test",
+        "fix": "yarn prettier:fix && yarn eslint:fix",
+        "extract-translations": "node ./scripts/extract_translations.js",
+        "build:js": "tsup",
+        "build": "yarn build:js",
+        "watch:js": "tsup --watch",
+        "watch": "yarn watch:js"
+    }
+}
